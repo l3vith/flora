@@ -1,0 +1,9 @@
+body {
+  background-color: black;
+  cursor: url('https://i.imgur.com/8X9ZQ9I.png'), auto;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  cursor: url('./assets/flower.png'), auto;
+}

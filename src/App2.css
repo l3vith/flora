@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
+:root {
+    --font-family-default: 'Noto Sans Display', Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+    --font-family-heading: 'Fraunces', Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif;
+    --font-family-monospace: 'Nimbus Mono PS', 'Courier New', monospace;
+  
+    --max-content-width: 100rem;
+    --max-reading-measure: 50ch;
+    --min-tap-size: 48px;
+    --min-tap-space: 8px;
+  
+    /*
+    * Colors
+    */
+    --color-background: #000;
+    --color-text: #fff0f4;
+    --color-primary: oklch(74% 0.15 32);
+    --color-secondary: oklch(65% 0.13 210);
+    --color-ui: oklch(65% 0.05 210);
+  
+    --color-yellow: oklch(80% 0.16 85);
+    --color-green: oklch(60% 0.16 135);
+    --color-red: oklch(65% 0.18 15);
+    --color-green-2: oklch(54% 0.11 164);
+    --color-purple: oklch(62% 0.15 318);
+    --color-red-2: oklch(57% 0.2 15);
+  
+    --color-link: var(--color-primary);
+    --color-link-hover: var(--color-secondary);
+  }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+
+    scroll-snap-align: start;
+
+    overflow-x: hidden;
+
+    line-height: 2px;
+}
+
+.upper {
+    margin-top: 13vh;
+
+    color: white;
+    background-color: white;
+    width: 100vw;
+    height: 0.1px;
+}
+
+.lower {
+
+
+    background-color: white;
+    width: 100vw;
+    height: 0.2px;
+}
+
+.scrolling {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-weight: 500;
+    font-family: var(--font-family-default);
+}
+
+.scroll {
+    white-space: nowrap;
+    animation: righttoleft 12s infinite linear;
+    width: 100vw;
+}
+
+@keyframes righttoleft {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.subdiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 83vh;
+}
+
+.seperator {
+    height: 100%;
+    background-color: white;
+    width: 0.1px;
+}
+
+.text {
+    color: white;
+    width: 40vw;
+    line-height: 2.2rem;
+    justify-self: flex-start;
+    align-self: flex-start;
+
+    margin-left: -40vw;
+}
+
+.text p {
+    font-family: var(--font-family-default);
+    font-weight: 500;
+    margin-top: 6vh;
+    margin-right: 200px;
+}
+
+.cards {
+    width: 6vw;
+    height: 100%;
+}
+
+.cards img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 28vw;
+    height: auto;
+
+    border-radius: 30px;
+
+    margin-top: 6vh;
+    margin-left: 12vw;
+
+    filter: grayscale(100%);
+}
+
+.coloredp {
+    color: var(--color-primary);
+}
+
+.coloredg {
+    color: var(--color-green);
+}
+
+.coloredy {
+    color: var(--color-yellow);
+}
+
+.coloredb {
+    color: var(--color-ui);
+}
+
+.coloredc {
+    color: var(--color-link-hover);
+}
+
+.coloredp {
+    color: var(--color-purple);
+}
+
+.mainer {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.cards h2 {
+    font-size: 2.5rem;
+    word-spacing: 20px;
+
+    width: 30vw;
+    font-family: "Prata", serif;
+    color: var(--color-text);
+
+    margin-top: 17vh;
+    margin-left: 16.5vw;
+}

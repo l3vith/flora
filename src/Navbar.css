@@ -1,0 +1,121 @@
+:root {
+    --font-family-default: 'Noto Sans Display', Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+    --font-family-heading: 'Fraunces', Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif;
+    --font-family-monospace: 'Nimbus Mono PS', 'Courier New', monospace;
+
+    --max-content-width: 100rem;
+    --max-reading-measure: 50ch;
+    --min-tap-size: 48px;
+    --min-tap-space: 8px;
+
+    /*
+    * Colors
+    */
+    --color-background: #000;
+    --color-text: #fff0f4;
+    --color-primary: oklch(74% 0.15 32);
+    --color-secondary: oklch(65% 0.13 210);
+    --color-ui: oklch(65% 0.05 210);
+
+    --color-yellow: oklch(80% 0.16 85);
+    --color-green: oklch(60% 0.16 135);
+    --color-red: oklch(65% 0.18 15);
+    --color-green-2: oklch(54% 0.11 164);
+    --color-purple: oklch(62% 0.15 318);
+    --color-red-2: oklch(57% 0.2 15);
+
+    --color-link: var(--color-primary);
+    --color-link-hover: var(--color-secondary);
+}
+
+
+.bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 5vh;
+    width: 88vw;
+    margin-top: 3vh;
+
+    position: fixed;
+    left: 50vw;
+    transform: translateX(-50%);
+
+    z-index: 2999;
+
+}
+
+.bar h2 {
+    font-size: 2.5rem;
+    font-family: var(--font-family-default);
+    color: var(--color-text);
+}
+
+.pill {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+
+    font-size: 1.1rem;
+    font-weight: 400;
+    font-family: var(--font-family-default);
+    border: 1px solid var(--color-ui);
+    padding: 13px;
+    border-radius: 2rem;
+    color: var(--color-text);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    cursor: pointer;
+
+    animation: hueShift 6s infinite linear 1s;
+}
+
+.pill a {
+    transition: all 0.5s;
+}
+
+.pill a:hover {
+    color: var(--color-link-hover);
+    animation: hueShift 6s infinite linear 1s;
+    font-size: 1.25rem;
+    font-size-adjust: 1.5rem;
+}
+
+
+@keyframes slide {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.bar h2 {
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(90deg, #0077e7, #01d8d1);
+    -webkit-filter: hue-rotate(0deg);
+    filter: hue-rotate(0deg);
+    animation: hueShift 6s infinite linear 1s, slide 1s ease-in-out;
+    transition: all 0.3s;
+
+}
+
+@keyframes hueShift {
+    0% {
+        -webkit-filter: hue-rotate(0deg);
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        -webkit-filter: hue-rotate(360deg);
+        filter: hue-rotate(360deg);
+    }
+}
+
+
+.bar h2:hover {
+    font-size: 3rem;
+    font-size-adjust: 2rem;
+}

@@ -1,0 +1,82 @@
+:root {
+    --font-family-default: 'Noto Sans Display', Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+    --font-family-heading: 'Fraunces', Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif;
+    --font-family-monospace: 'Nimbus Mono PS', 'Courier New', monospace;
+  
+    --max-content-width: 100rem;
+    --max-reading-measure: 50ch;
+    --min-tap-size: 48px;
+    --min-tap-space: 8px;
+  
+    /*
+    * Colors
+    */
+    --color-background: #000;
+    --color-text: #fff0f4;
+    --color-primary: oklch(74% 0.15 32);
+    --color-secondary: oklch(65% 0.13 210);
+    --color-ui: oklch(65% 0.05 210);
+  
+    --color-yellow: oklch(80% 0.16 85);
+    --color-green: oklch(60% 0.16 135);
+    --color-red: oklch(65% 0.18 15);
+    --color-green-2: oklch(54% 0.11 164);
+    --color-purple: oklch(62% 0.15 318);
+    --color-red-2: oklch(57% 0.2 15);
+  
+    --color-link: var(--color-primary);
+    --color-link-hover: var(--color-secondary);
+  }
+  
+.yellow {
+    display: flex;
+    flex-direction: row;
+  
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .imagey {
+    margin-top: 14vh;
+    position: absolute;
+    width: 28vw;
+    height: auto;
+  
+    left: 50%;
+    transform: translateX(-50%);
+  
+  }
+  
+.sym {
+    color: var(--color-yellow);
+}
+
+  .yellow h2 {
+    color: var(--color-text);
+    font-family: var(--font-family-heading, var(--font-family-default, 1rem));
+    line-height: var(--line-height-heading, 1.25);
+    font-weight: 100;
+    font-size: 6rem;
+    font-family: 'Arial Nova';
+  
+    width: 40vw;
+  
+    z-index: 1000;
+  
+    margin-top: 20vh;
+    margin-left: 10vw;
+  }
+  
+  .yellow p{
+    color: var(--color-text);
+    margin-top: 56vh;
+    font-size: 30px;
+    width: 34vw;
+    line-height: 2.5rem;
+    font-family: 'Arial Nova';
+    font-weight: 100;
+  }
+  
+  .coloredy {
+    color: var(--color-yellow);
+  }
